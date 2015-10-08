@@ -1,0 +1,5 @@
+model eo1_2.mod;
+data eo1_1_small.dat;
+option solver './cplex';
+solve;
+display x;
