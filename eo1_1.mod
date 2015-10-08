@@ -10,8 +10,6 @@ param b {i in R, j in C, k in B};
 param p;
 
 var x {k in B};
-var s_1;
-var s_2;
 
 maximize tumor_treatment: sum {k in B} x[k] * sum {i in R}
     sum {j in C} b[i, j, k]*((1 - p/100)*t[i,j] - (p/100)*c[i, j]);
