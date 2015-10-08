@@ -1,5 +1,11 @@
-model eo1_1.mod;
+model eo1_2.mod;
 data eo1_1_big.dat;
 option solver './cplex';
 solve;
 display x;
+for {k in B} { 
+    if k != 0
+        then printf "\n" > eo1_2_big.out;
+        else;
+    print {i in R}: {j in C} x[k] * b[i, j, k] > eo1_2_big.out;
+}

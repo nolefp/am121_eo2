@@ -18,4 +18,4 @@ subject to critical_dose {i in R, j in C}: sum {k in B} x[k] * b[i, j, k] * c[i,
 subject to tumor_dose {i in R, j in C}: sum {k in B} x[k] * b[i, j, k] * t[i, j] >= d_t;
 subject to tumor_dose_2 {i in R, j in C}: sum {k in B} x[k] * b[i, j, k] * t[i, j] <= 1.5*d_t;
 subject to negfib {k in B}: x[k] >= 0;
-subject to max_tumor {k in B}: x[k] <= 5;
+# subject to max_tumor {k in B}: x[k] <= 5;
