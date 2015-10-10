@@ -7,7 +7,7 @@ set L := -1 0 1;
 
 param d_c := 2;
 param d_t := 10;
-param max_strength := 20;
+param max_strength := 100;
 param g := 80;
 
 read {i in R, j in C} c[i, j] < critical_raw.txt;
