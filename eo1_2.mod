@@ -23,3 +23,5 @@ subject to tumor_dose_2 {i in R, j in C}: sum {k in B} x[k] * b[i, j, k] * t[i, 
 subject to nonneg_x {k in B}: x[k] >= 0;
 subject to nonneg_s1: s_1 >= 0;
 subject to nonneg_s2: s_2 >= 0;
+subject to upper_s1: s_1 <= 0.1*d_c;
+subject to upper_s2: s_2 >= 0.1*d_t;
