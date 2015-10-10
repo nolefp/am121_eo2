@@ -7,8 +7,6 @@ param d_t;
 param t {i in R, j in C};
 param c {i in R, j in C};
 param b {k in B, i in R, j in C};
-param a;
-param r;
 param max_strength;
 
 var x {k in B};
