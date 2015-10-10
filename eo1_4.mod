@@ -16,7 +16,7 @@ var s_1 {i in R, j in C};
 var s_2 {i in R, j in C};
 
 maximize tumor_treatment: 
-    (sum {k in B, i in R, j in C} (1/12250 * g^2 + 6/1225 * g + 81/98) * x[k] * b[k, i, j]  * t[i, j]) 
+    (sum {k in B, i in R, j in C} 10 * (1/12250 * g^2 + 6/1225 * g + 81/98) * x[k] * b[k, i, j]  * t[i, j]) 
     - (sum {k in B, i in R, j in C} x[k] * b[k, i, j] * c[i, j])
     - 100 * (sum {i in R, j in C} (s_1[i, j] + s_2[i, j]))
     - (sum {k in B} x[k] * sum{i in R, j in C} b[k, i, j] * (1 - c[i, j]) 
