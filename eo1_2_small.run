@@ -5,4 +5,4 @@ solve;
 display x;
 display s_1;
 display s_2;
-print {i in R}: {j in C} sum {k in B} x[k] * b[i, j, k] > eo1_2_small.out;
+print {i in R}: {j in C} sum {k in B} x[k] * b[k, i, j] > eo1_2_small.out;
