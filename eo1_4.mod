@@ -1,6 +1,6 @@
-set R; # set of rows
-set C; # set of columns
-set B; # set of beams
+set R;
+set C;
+set B;
 set L; 
 
 param d_c;  
