@@ -21,7 +21,7 @@ subject to critical_dose {i in R, j in C}: sum {k in B} x[k] * b[i, j, k] * c[i,
 subject to tumor_dose {i in R, j in C}: sum {k in B} x[k] * b[i, j, k] * t[i, j] >= d_t - s_2;
 subject to tumor_dose_2 {i in R, j in C}: sum {k in B} x[k] * b[i, j, k] * t[i, j] <= r*d_t;
 subject to nonneg_x {k in B}: x[k] >= 0;
-subject to x_upper {k in B}: x[k] <= 0.5;
+subject to x_upper {k in B}: x[k] <= 1;
 subject to nonneg_s1: s_1 >= 0;
 subject to nonneg_s2: s_2 >= 0;
 

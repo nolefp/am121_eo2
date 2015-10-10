@@ -1,5 +1,5 @@
 model eo1_2.mod;
-data eo1_1_big.dat;
+data eo1_1_big_read.dat;
 option solver './cplex';
 solve;
 display x;
