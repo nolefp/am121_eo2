@@ -3,4 +3,4 @@ data eo1_1_big_read.dat;
 option solver './cplex';
 solve;
 display x;
-print {i in R}: {j in C} sum {k in B} x[k] * b[i, j, k] > eo1_2_big.out;
+print {i in R}: {j in C} sum {k in B} x[k] * b[k, i, j] > eo1_2_big.out;
