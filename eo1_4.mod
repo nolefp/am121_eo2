@@ -8,6 +8,7 @@ param d_t;
 param t {i in R, j in C};
 param c {i in R, j in C};
 param b {k in B, i in R, j in C};
+param u {k in B, i in R, j in C};
 param max_strength;
 param g;
 
@@ -20,7 +21,8 @@ maximize tumor_treatment:
     - (sum {k in B, i in R, j in C} x[k] * b[k, i, j] * c[i, j])
     - 100 * (sum {i in R, j in C} (s_1[i, j] + s_2[i, j]))
     - (sum {k in B} x[k] * sum{i in R, j in C} b[k, i, j] * (1 - c[i, j]) 
-    * prod {l in L: (i+l) >= 0 and (j+l) >= 0 and (i+l) < card(R) and (j+1) < card(C)} (1 - c[i+l, j+l]));
+    * prod {l in L: (i+l) >= 0 and (j+l) >= 0 and (i+l) < card(R) and (j+1) < card(C)} (1 - c[i+l, j+l]))
+    - (sum {k in B, i in R, j in C} x[k] * u[k, i, j]);
 
 subject to critical_dose {i in R, j in C}: sum {k in B} (x[k] * b[k, i, j]) * c[i, j] <= (d_c + s_1[i, j])*c[i, j];
 subject to tumor_dose {i in R, j in C}: sum {k in B} (x[k] * b[k, i, j]) * t[i, j] >= (d_t - s_2[i, j])*t[i, j];

@@ -13,3 +13,4 @@ param g := 80;
 read {i in R, j in C} c[i, j] < critical_raw.txt;
 read {i in R, j in C} t[i, j] < tumor_raw.txt;
 read {k in B, i in R, j in C} b[k, i, j] < beam.txt;
+read {k in B, i in R, j in C} u[k, i, j] < imprecise_beam.txt;
