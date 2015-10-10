@@ -17,7 +17,7 @@ var s_2 {i in R, j in C};
 maximize tumor_treatment: 
     (sum {i in R, j in C, k in B} x[k] * b[i, j, k] * t[i, j]) 
     - (sum {i in R, j in C, k in B} x[k] * b[i, j, k] * c[i, j])
-    - (1/0.3) * (max {k in B} (sum {i in R, j in C} b[i, j, k])) * 
+    - (max {k in B} (sum {i in R, j in C} b[i, j, k])) * 
     (sum {i in R, j in C} s_1[i, j] + sum {i in R, j in C} s_2[i, j]);
 
 subject to critical_dose {i in R, j in C}: sum {k in B} x[k] * b[i, j, k] * c[i, j] <= d_c + s_1[i, j];
