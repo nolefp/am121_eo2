@@ -1,0 +1,6 @@
+Task 2:
+mod file: task2_mod.mod
+data file: task2_data.dat
+run file: task2.run
+log output: task2_(X).log
+solution output: task2_(X).out
