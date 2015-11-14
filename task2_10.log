@@ -1,0 +1,36 @@
+option show_stats 1;
+
+solve;
+
+Presolve eliminates 218 constraints and 98 variables.
+Adjusted problem:
+2 variables, all binary
+2 constraints, all linear; 4 nonzeros
+	2 equality constraints
+1 linear objective; 2 nonzeros.
+
+CPLEX 12.6.2.0: timing = 1
+mipdisplay = 2
+mipinterval = 1
+Found incumbent of value 0.000000 after 0.00 sec. (0.00 ticks)
+Found incumbent of value 2.000000 after 0.00 sec. (0.00 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.00 sec. (0.00 ticks)
+Parallel b&c, 4 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.00 sec. (0.00 ticks)
+
+Times (seconds):
+Input =  0.000584
+Solve =  0.000701
+Output = 0.000398
+CPLEX 12.6.2.0: optimal integer solution; objective 2
+0 MIP simplex iterations
+0 branch-and-bound nodes
+No basis.
+
+print {i in (1 .. total_pairs)}: {j in (1 .. total_pairs)} pair_swap[i, j] > task2_10.out;
