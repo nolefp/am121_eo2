@@ -1,7 +1,0 @@
-model eo1_4.mod;
-data eo1_4_big.dat;
-option solver './cplex';
-solve;
-display x;
-
-print {i in R}: {j in C} sum {k in B} x[k] * b[k, i, j] > eo1_4_big.out;
