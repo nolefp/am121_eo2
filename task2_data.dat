@@ -1,5 +1,5 @@
 data;
 
-param total_pairs := 50;
+param total_pairs := 100;
 
-read {(i,j) in PAIRS} compatible[i,j] < 'data/50_raw.txt';
+read {(i,j) in PAIRS} compatible[i,j] < 'data/100_raw.txt';

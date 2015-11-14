@@ -12,25 +12,28 @@ Adjusted problem:
 CPLEX 12.6.2.0: timing = 1
 mipdisplay = 2
 mipinterval = 1
-Found incumbent of value 0.000000 after 0.00 sec. (0.00 ticks)
-Found incumbent of value 2.000000 after 0.00 sec. (0.00 ticks)
+Found incumbent of value 0.000000 after 0.01 sec. (0.00 ticks)
+Found incumbent of value 2.000000 after 0.01 sec. (0.00 ticks)
 
 Root node processing (before b&c):
-  Real time             =    0.00 sec. (0.00 ticks)
+  Real time             =    0.01 sec. (0.00 ticks)
 Parallel b&c, 4 threads:
   Real time             =    0.00 sec. (0.00 ticks)
   Sync time (average)   =    0.00 sec.
   Wait time (average)   =    0.00 sec.
                           ------------
-Total (root+branch&cut) =    0.00 sec. (0.00 ticks)
+Total (root+branch&cut) =    0.01 sec. (0.00 ticks)
 
 Times (seconds):
-Input =  0.000584
-Solve =  0.000701
-Output = 0.000398
+Input =  0.004165
+Solve =  0.001784
+Output = 0.001102
 CPLEX 12.6.2.0: optimal integer solution; objective 2
 0 MIP simplex iterations
 0 branch-and-bound nodes
 No basis.
+
+print Total_swaps > task2_10.log;
+2
 
 print {i in (1 .. total_pairs)}: {j in (1 .. total_pairs)} pair_swap[i, j] > task2_10.out;

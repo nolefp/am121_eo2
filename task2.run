@@ -7,9 +7,11 @@ option cplex_options
 model task2_mod.mod;
 data task2_data.dat; 
 
-option log_file 'task2_50.log';
+option log_file 'task2_100.log';
 option show_stats 1;
 
 solve;
 
-print {i in (1 .. total_pairs)}: {j in (1 .. total_pairs)} pair_swap[i, j] > task2_50.out;
+print Total_swaps > task2_100.log;
+
+print {i in (1 .. total_pairs)}: {j in (1 .. total_pairs)} pair_swap[i, j] > task2_100.out;

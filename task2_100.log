@@ -1,0 +1,70 @@
+option show_stats 1;
+
+solve;
+
+Presolve eliminates 19284 constraints and 9240 variables.
+Adjusted problem:
+760 variables, all binary
+916 constraints, all linear; 3014 nonzeros
+	760 equality constraints
+	156 inequality constraints
+1 linear objective; 760 nonzeros.
+
+CPLEX 12.6.2.0: timing = 1
+mipdisplay = 2
+mipinterval = 1
+Found incumbent of value 0.000000 after 0.01 sec. (0.02 ticks)
+MIP Presolve eliminated 486 rows and 188 columns.
+MIP Presolve modified 6 coefficients.
+Reduced MIP has 50 rows, 192 columns, and 360 nonzeros.
+Reduced MIP has 192 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Probing time = 0.00 sec. (0.17 ticks)
+MIP Presolve eliminated 13 rows and 69 columns.
+MIP Presolve modified 1 coefficients.
+Reduced MIP has 37 rows, 123 columns, and 244 nonzeros.
+Reduced MIP has 123 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Probing time = 0.00 sec. (0.09 ticks)
+MIP Presolve eliminated 17 rows and 52 columns.
+Reduced MIP has 20 rows, 71 columns, and 142 nonzeros.
+Reduced MIP has 71 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Probing time = 0.00 sec. (0.05 ticks)
+Reduced MIP has 20 rows, 71 columns, and 142 nonzeros.
+Reduced MIP has 71 binaries, 0 generals, 0 SOSs, and 0 indicators.
+Probing time = 0.00 sec. (0.05 ticks)
+Clique table members: 20.
+MIP emphasis: balance optimality and feasibility.
+MIP search method: dynamic search.
+Parallel mode: deterministic, using up to 4 threads.
+Root relaxation solution time = 0.00 sec. (0.07 ticks)
+
+        Nodes                                         Cuts/
+   Node  Left     Objective  IInf  Best Integer    Best Bound    ItCnt     Gap
+
+*     0+    0                           38.0000      180.0000           373.68%
+*     0+    0                           56.0000      180.0000           221.43%
+      0     0        cutoff             56.0000       56.0000       27    0.00%
+      0     0        cutoff             56.0000       56.0000       27    0.00%
+Elapsed time = 0.05 sec. (6.13 ticks, tree = 0.00 MB)
+
+Root node processing (before b&c):
+  Real time             =    0.05 sec. (6.14 ticks)
+Parallel b&c, 4 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.05 sec. (6.14 ticks)
+
+Times (seconds):
+Input =  0.004807
+Solve =  0.026325
+Output = 0.000561
+CPLEX 12.6.2.0: optimal integer solution; objective 56
+27 MIP simplex iterations
+0 branch-and-bound nodes
+No basis.
+
+print Total_swaps > task2_100.log;
+56
+
+print {i in (1 .. total_pairs)}: {j in (1 .. total_pairs)} pair_swap[i, j] > task2_100.out;

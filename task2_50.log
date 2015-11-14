@@ -47,12 +47,15 @@ Parallel b&c, 4 threads:
 Total (root+branch&cut) =    0.01 sec. (0.96 ticks)
 
 Times (seconds):
-Input =  0.002603
-Solve =  0.017868
-Output = 0.000338
+Input =  0.001098
+Solve =  0.01034
+Output = 0.000369
 CPLEX 12.6.2.0: optimal integer solution; objective 28
 24 MIP simplex iterations
 0 branch-and-bound nodes
 No basis.
+
+print Total_swaps > task2_50.log;
+28
 
 print {i in (1 .. total_pairs)}: {j in (1 .. total_pairs)} pair_swap[i, j] > task2_50.out;
